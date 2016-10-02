@@ -13,7 +13,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @SpringBootApplication
 @EnableAutoConfiguration
 @EnableJpaRepositories("stu.cn.ua.transport.repository")
-@EntityScan("stu.cn.ua.domain")
+@EntityScan("stu.cn.ua.transport.domain")
 @ComponentScan("stu.cn.ua.transport")
 public class Application extends SpringBootServletInitializer{
 
