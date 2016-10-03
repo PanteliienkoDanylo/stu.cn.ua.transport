@@ -22,21 +22,6 @@ public class User {
     @Column(name = "password")
     private String password;
 
-    public User(Long id, String name, String surname, String login, String password) {
-        this.id = id;
-        this.name = name;
-        this.surname = surname;
-        this.login = login;
-        this.password = password;
-    }
-
-    public User(String name, String surname, String login, String password) {
-        this.name = name;
-        this.surname = surname;
-        this.login = login;
-        this.password = password;
-    }
-
     public User() {
     }
 
