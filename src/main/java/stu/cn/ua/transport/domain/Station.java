@@ -2,6 +2,7 @@ package stu.cn.ua.transport.domain;
 
 import javax.persistence.*;
 import java.util.List;
+import java.util.Set;
 
 @Entity
 @Table(name = "station")
@@ -24,7 +25,7 @@ public class Station {
     @JoinTable(name = "station_route",
             joinColumns = @JoinColumn(name = "station_id", referencedColumnName = "id"),
             inverseJoinColumns = @JoinColumn(name = "route_id", referencedColumnName = "id"))
-    private List<Route> routes;
+    private Set<Route> routes;
 
     public Station() {
     }
@@ -61,11 +62,11 @@ public class Station {
         this.latitude = latitude;
     }
 
-    public List<Route> getRoutes() {
+    public Set<Route> getRoutes() {
         return routes;
     }
 
-    public void setRoutes(List<Route> routes) {
+    public void setRoutes(Set<Route> routes) {
         this.routes = routes;
     }
 }

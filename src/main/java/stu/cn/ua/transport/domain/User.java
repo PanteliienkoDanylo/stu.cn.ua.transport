@@ -5,6 +5,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "user")
+//@Inheritance(strategy=InheritanceType.SINGLE_TABLE)
 public class User {
 
     @Id

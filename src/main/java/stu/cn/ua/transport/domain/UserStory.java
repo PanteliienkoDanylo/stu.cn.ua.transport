@@ -13,12 +13,12 @@ public class UserStory {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @OneToOne(optional = false)
-    @JoinColumn(name = "station_id", unique = true, nullable = false)
+    @OneToOne
+    @JoinColumn(name = "station_id")
     private Station station;
 
-    @OneToOne(optional = false)
-    @JoinColumn(name = "user_id", unique = true, nullable = false)
+    @OneToOne
+    @JoinColumn(name = "user_id")
     private User user;
 
     @Temporal(TemporalType.DATE)

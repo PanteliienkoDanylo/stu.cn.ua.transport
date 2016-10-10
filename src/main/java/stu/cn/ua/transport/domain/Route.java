@@ -3,6 +3,7 @@ package stu.cn.ua.transport.domain;
 import javax.persistence.*;
 import java.util.Date;
 import java.util.List;
+import java.util.Set;
 
 @Entity
 @Table(name = "route")
@@ -20,11 +21,8 @@ public class Route {
     @Column(name = "end_time")
     private Date endTime;
 
-    @OneToMany(fetch = FetchType.EAGER, mappedBy = "route")
-    private List<Transport> transports;
-
     @ManyToMany(fetch = FetchType.EAGER, mappedBy = "routes")
-    private List<Station> stations;
+    private Set<Station> stations;
 
     public Route() {
     }
@@ -53,19 +51,11 @@ public class Route {
         this.endTime = endTime;
     }
 
-    public List<Transport> getTransports() {
-        return transports;
-    }
-
-    public void setTransports(List<Transport> transports) {
-        this.transports = transports;
-    }
-
-    public List<Station> getStations() {
+    public Set<Station> getStations() {
         return stations;
     }
 
-    public void setStations(List<Station> stations) {
+    public void setStations(Set<Station> stations) {
         this.stations = stations;
     }
 }

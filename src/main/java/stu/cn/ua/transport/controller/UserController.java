@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import stu.cn.ua.transport.domain.User;
 import stu.cn.ua.transport.service.UserService;
+import stu.cn.ua.transport.service.UserStoryService;
 
 import java.util.List;
 
@@ -15,6 +16,9 @@ public class UserController {
 
     @Autowired
     private UserService userService;
+
+    //@Autowired
+    //private UserStoryService userStoryService;
 
     @RequestMapping("/")
     public String hello() {
