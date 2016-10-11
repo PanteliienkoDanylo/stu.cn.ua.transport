@@ -1,5 +1,6 @@
 package stu.cn.ua.transport.domain;
 
+
 import javax.persistence.*;
 
 @Entity
@@ -65,14 +66,5 @@ public class User {
         this.password = password;
     }
 
-    @Override
-    public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", surname='" + surname + '\'' +
-                ", login='" + login + '\'' +
-                ", password='" + password + '\'' +
-                '}';
-    }
+
 }
