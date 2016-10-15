@@ -1,12 +1,10 @@
 package stu.cn.ua.transport.domain;
 
-
 import javax.persistence.*;
 
-
 @Entity
-@Table(name = "driver")
-public class Driver{
+@Table(name = "electronic_ticket_user")
+public class ElectronicTickerUser {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -17,10 +15,10 @@ public class Driver{
     private User user;
 
     @OneToOne
-    @JoinColumn(name = "transport_id")
-    private Transport transport;
+    @JoinColumn(name = "electronic_ticket_id")
+    private ElectronicTicket electronicTicket;
 
-    public Driver() {
+    public ElectronicTickerUser() {
     }
 
     public Long getId() {
@@ -39,11 +37,11 @@ public class Driver{
         this.user = user;
     }
 
-    public Transport getTransport() {
-        return transport;
+    public ElectronicTicket getElectronicTicket() {
+        return electronicTicket;
     }
 
-    public void setTransport(Transport transport) {
-        this.transport = transport;
+    public void setElectronicTicket(ElectronicTicket electronicTicket) {
+        this.electronicTicket = electronicTicket;
     }
 }

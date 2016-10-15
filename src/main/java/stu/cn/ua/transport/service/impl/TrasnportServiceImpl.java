@@ -2,12 +2,14 @@ package stu.cn.ua.transport.service.impl;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import stu.cn.ua.transport.domain.Transport;
 import stu.cn.ua.transport.repository.TransportRepository;
 import stu.cn.ua.transport.service.TransportService;
 
 import java.util.List;
 
+@Service
 public class TrasnportServiceImpl implements TransportService{
 
     @Autowired

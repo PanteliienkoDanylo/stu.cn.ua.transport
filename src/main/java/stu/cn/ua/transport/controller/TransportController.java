@@ -15,11 +15,11 @@ import java.util.*;
 @RestController
 public class TransportController {
 
-    /*@Autowired
-    private TransportService transportService;*/
+    @Autowired
+    private TransportService transportService;
 
 
-    /*@RequestMapping(value = "/createTransport", method = RequestMethod.GET)
+    @RequestMapping(value = "/createTransport", method = RequestMethod.GET)
     public String createTransport() {
         Transport transport = new Transport();
         transport.setNumber(12);
@@ -33,14 +33,14 @@ public class TransportController {
         }
 
         return "User have done";
-    }*/
+    }
 
-    /*@RequestMapping(value = "/getAllTransport", method = RequestMethod.GET)
+    @RequestMapping(value = "/getAllTransport", method = RequestMethod.GET)
     public List<Transport> getAllTransport(){
         return transportService.getAll();
-    }*/
+    }
 
-    /*private Route getRoute(){
+    private Route getRoute(){
         Route route = new Route();
         route.setStartTime(new Date(System.currentTimeMillis()));
         route.setEndTime(new Date(System.currentTimeMillis()));
@@ -75,5 +75,5 @@ public class TransportController {
         transport.setLatitude(99.00);
         transports.add(transport);
         return transports;
-    }*/
+    }
 }

@@ -25,7 +25,7 @@ public class Station {
     @JoinTable(name = "station_route",
             joinColumns = @JoinColumn(name = "station_id", referencedColumnName = "id"),
             inverseJoinColumns = @JoinColumn(name = "route_id", referencedColumnName = "id"))
-    private Set<Route> routes;
+    private List<Route> routes;
 
     public Station() {
     }
@@ -62,11 +62,11 @@ public class Station {
         this.latitude = latitude;
     }
 
-    public Set<Route> getRoutes() {
+    public List<Route> getRoutes() {
         return routes;
     }
 
-    public void setRoutes(Set<Route> routes) {
+    public void setRoutes(List<Route> routes) {
         this.routes = routes;
     }
 }

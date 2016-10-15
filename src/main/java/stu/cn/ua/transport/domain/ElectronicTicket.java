@@ -49,12 +49,5 @@ public class ElectronicTicket {
         this.number = number;
     }
 
-    @Override
-    public String toString() {
-        return "ElectronicTicket{" +
-                "id=" + id +
-                ", point=" + point +
-                ", number=" + number +
-                '}';
-    }
+
 }

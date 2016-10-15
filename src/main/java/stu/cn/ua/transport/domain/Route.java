@@ -22,7 +22,7 @@ public class Route {
     private Date endTime;
 
     @ManyToMany(fetch = FetchType.EAGER, mappedBy = "routes")
-    private Set<Station> stations;
+    private List<Station> stations;
 
     public Route() {
     }
@@ -51,11 +51,11 @@ public class Route {
         this.endTime = endTime;
     }
 
-    public Set<Station> getStations() {
+    public List<Station> getStations() {
         return stations;
     }
 
-    public void setStations(Set<Station> stations) {
+    public void setStations(List<Station> stations) {
         this.stations = stations;
     }
 }
