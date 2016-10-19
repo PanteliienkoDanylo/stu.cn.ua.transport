@@ -44,7 +44,7 @@ public class TransportController {
         Route route = new Route();
         route.setStartTime(new Date(System.currentTimeMillis()));
         route.setEndTime(new Date(System.currentTimeMillis()));
-        route.setStations(getListStation());
+        //route.setStations(getListStation());
         return route;
     }
 
@@ -55,7 +55,7 @@ public class TransportController {
         station.setName("hello");
         station.setLongitude(99.9);
         station.setLatitude(88.8);
-        station.setRoutes(getListRoute());
+       // station.setRoutes(getListRoute());
         stations.add(station);
         return stations;
     }

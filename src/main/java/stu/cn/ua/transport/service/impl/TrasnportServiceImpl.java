@@ -21,6 +21,11 @@ public class TrasnportServiceImpl implements TransportService{
     }
 
     @Override
+    public Transport findById(Long id) {
+        return transportRepository.findOne(id);
+    }
+
+    @Override
     public void delete(Long id) {
         transportRepository.delete(id);
     }

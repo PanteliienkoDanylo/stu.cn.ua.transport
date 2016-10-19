@@ -21,6 +21,9 @@ public class Route {
     @Column(name = "end_time")
     private Date endTime;
 
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "route")
+    private List<Transport> transports;
+
     @ManyToMany(fetch = FetchType.EAGER, mappedBy = "routes")
     private List<Station> stations;
 
@@ -45,6 +48,14 @@ public class Route {
 
     public Date getEndTime() {
         return endTime;
+    }
+
+    public List<Transport> getTransports() {
+        return transports;
+    }
+
+    public void setTransports(List<Transport> transports) {
+        this.transports = transports;
     }
 
     public void setEndTime(Date endTime) {

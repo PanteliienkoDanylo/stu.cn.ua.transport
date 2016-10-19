@@ -8,6 +8,7 @@ import java.util.List;
 public interface TransportService {
 
     Transport addTransport(Transport transport);
+    Transport findById(Long id);
     void delete(Long id);
     List<Transport> getAll();
 }
